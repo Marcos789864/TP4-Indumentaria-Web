@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Paginita</h1>
+
+
+<a href='@Url.Action("SelectIndumentaria")'> Crear Indumentaria</a>
+
+@foreach (string item in ViewBag.DicEquipo.Keys)
+{
+    @item
+   <img src="/imagenes/@ViewBag.DicEquipo[item].Media">
+   <img src="/imagenes/@ViewBag.DicEquipo[item].Pantalon">
+   <img src="/imagenes/@ViewBag.DicEquipo[item].Remera">
+   
+}
